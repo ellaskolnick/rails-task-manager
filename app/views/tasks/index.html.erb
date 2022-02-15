@@ -3,5 +3,8 @@
 <% @tasks.each do |task| %>
   <li>
     <%= link_to task.title, task_path(task.id) %>
+    <%= link_to "Destory", task_path(task.id), method: :delete, data: { confirm: "Delete #{task.title}?"} %>
   </li>
 <% end %>
+<br>
+<%= link_to "Add a new task", new_task_path %>
