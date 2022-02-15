@@ -3,3 +3,6 @@
 <br>
 <br>
 <%= link_to "Back to list", tasks_path %>
+<br>
+<br>
+<%= link_to "Destory", task_path(@task), method: :delete, data: { confirm: "Delete #{@task.title}?"} %>
